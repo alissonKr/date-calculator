@@ -1,6 +1,7 @@
 // Página inicial (home_page.dart)
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:myapp/features/home/presentation/pages/prazoEscolhido.dart';
 import '../widgets/date_selector.dart';
 import '../../logic/date_calculator.dart';
 import '../../logic/dropdown_parser.dart';
@@ -221,6 +222,18 @@ class _CalculadoraPrazosHomePageState extends State<CalculadoraPrazosHomePage> {
                     ),
                   ],
                 ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ParcelasCalculator()),
+                  );
+                },
+                child: const Text('Descobrir o prazo que o cliente comprou'),
               ),
             ),
             Container(
